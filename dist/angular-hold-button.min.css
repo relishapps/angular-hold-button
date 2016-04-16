@@ -1,1 +1,1 @@
-button[rm-onhold]{position:relative}button[rm-onhold] .fill{background-color:#000;display:block;height:100%;left:0;overflow:hidden;position:absolute;top:0;width:0}button[rm-onhold] .text{color:#fff;display:block;left:0;position:absolute;right:0}
+.rm-hold-button{position:relative}.rm-hold-button-fill{background-color:#000;display:block;height:100%;left:0;overflow:hidden;position:absolute;top:0;width:0}.rm-hold-button-text{color:#fff;display:block;left:0;position:absolute;right:0}

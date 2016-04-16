@@ -5,11 +5,13 @@ module.directive 'rmOnhold', ['$parse', ($parse) ->
   link: (scope, button, attrs) ->
     $button = $ button
 
+    $button.addClass 'rm-hold-button'
+
     options = ($parse attrs.rmOnholdOptions)() ? {}
     options.duration ?= 1000
 
-    $fill = $ '<span></span>', class: 'fill'
-    $text = $ '<span></span>', class: 'text', text: $button.text()
+    $fill = $ '<span></span>', class: 'rm-hold-button-fill'
+    $text = $ '<span></span>', class: 'rm-hold-button-text', text: $button.text()
     $text.css 'lineHeight', $button.innerHeight() + 'px'
     $text.width $button.outerWidth()
 
@@ -17,12 +19,12 @@ module.directive 'rmOnhold', ['$parse', ($parse) ->
     $fill.prepend $text
 
     $button.on 'mouseup mouseleave', ->
-      $('.fill').stop()
-      $('.fill').animate { width: 0 }, 250
+      $('.rm-hold-button-fill').stop()
+      $('.rm-hold-button-fill').animate { width: 0 }, 250
 
     $button.mousedown ->
-      $('.fill').stop()
-      $('.fill').animate { 'width': '100%' }, options.duration, 'linear', ->
+      $('.rm-hold-button-fill').stop()
+      $('.rm-hold-button-fill').animate { 'width': '100%' }, options.duration, 'linear', ->
         scope.$apply ->
           scope.$eval(attrs.rmOnhold)
 ]

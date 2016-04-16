@@ -64,7 +64,7 @@ You can customise how long the button has to be held:
 ##### The button
 
 ```css
-button[rm-onhold] {
+.rm-hold-button {
     border: 1px solid red;
     color: red;
     line-height: 24px;
@@ -75,7 +75,7 @@ button[rm-onhold] {
 ##### Colour of the fill
 
 ```css
-button[rm-onhold] .fill {
+.rm-hold-button-fill {
     background-color: red;
 }
 ```
@@ -83,7 +83,7 @@ button[rm-onhold] .fill {
 ##### Colour of text in the filled portion of the button
 
 ```css
-button[rm-onhold] .text {
+.rm-hold-button-text {
     color: white;
 }
 ```
@@ -93,7 +93,7 @@ button[rm-onhold] .text {
 ##### Along the top
 
 ```css
-button[rm-onhold] .fill {
+.rm-hold-button-fill {
     height: 3px;
 }
 ```
@@ -101,8 +101,9 @@ button[rm-onhold] .fill {
 ##### Along the bottom
 
 ```css
-button[rm-onhold] .fill {
+.rm-hold-button-fill {
     bottom: 0;
     height: 3px;
     top: auto;
 }
+```
