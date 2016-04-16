@@ -4,7 +4,13 @@ An AngularJS directive that turns a regular `<button>` into one that has to be h
 
 ## Demo
 
+### Preview
+
 ![Hold Button demo](http://i.imgur.com/rzx8nXJ.gif)
+
+### Live demo
+
+[Live view](http://htmlpreview.github.io/?https://github.com/relishmedia/angular-hold-button/blob/master/examples/demo.html) of [examples/demo.html](examples/demo.html).
 
 ## Installation
 
