@@ -1,6 +1,6 @@
 {
     "name": "angular-hold-button",
-    "description": "An AngularJS directive that turns a regular <button> into one that has to be held for a configurable amount of time before it performs an action.",
+    "description": "AngularJS directive that turns a <button> into one that has to be held for a configurable amount of time before it performs an action.",
     "main": [
         "dist/angular-hold-button.min.js",
         "dist/angular-hold-button.min.css"
