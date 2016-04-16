@@ -20,6 +20,12 @@ An AngularJS directive that turns a regular `<button>` into one that has to be h
 npm install angular-hold-button --save
 ```
 
+### bower
+
+```bash
+bower install angular-hold-button --save
+```
+
 ### Manual
 
 Copy `dist/angular-hold-button.min.js` to your project.
