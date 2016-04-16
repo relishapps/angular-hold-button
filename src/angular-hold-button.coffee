@@ -1,12 +1,16 @@
 module = angular.module 'rmHoldButton', []
 
-module.directive 'rmOnhold', ->
+module.directive 'rmOnhold', ['$parse', ($parse) ->
   restrict: 'A'
   link: (scope, button, attrs) ->
-    $button = $(button)
+    $button = $ button
+
+    options = ($parse attrs.rmOnholdOptions)() ? {}
+    options.duration ?= 1000
 
     $fill = $ '<span></span>', class: 'fill'
     $text = $ '<span></span>', class: 'text', text: $button.text()
+    $text.css 'lineHeight', $button.innerHeight() + 'px'
     $text.width $button.outerWidth()
 
     $button.prepend $fill
@@ -18,6 +22,7 @@ module.directive 'rmOnhold', ->
 
     $button.mousedown ->
       $('.fill').stop()
-      $('.fill').animate { 'width': '100%' }, 1000, 'linear', ->
+      $('.fill').animate { 'width': '100%' }, options.duration, 'linear', ->
         scope.$apply ->
           scope.$eval(attrs.rmOnhold)
+]
