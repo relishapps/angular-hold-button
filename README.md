@@ -6,6 +6,18 @@ An AngularJS directive that turns a regular `<button>` into one that has to be h
 
 ![Hold Button demo](http://i.imgur.com/rzx8nXJ.gif)
 
+## Installation
+
+### npm
+
+```bash
+npm install angular-hold-button --save
+```
+
+### Manual
+
+Copy `dist/angular-hold-button.min.js` to your project.
+
 ## How to use
 
 Add `rmHoldButton` to dependencies
