@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Angular Hold Button Demo</title>
+
+    <link rel="stylesheet" href="../dist/angular-hold-button.min.css">
+    <style>
+        body {
+            line-height: 32px;
+        }
+
+        input {
+            line-height: 32px;
+            padding: 0 10px;
+        }
+
+        button[rm-onhold] {
+            background-color: #fff;
+            border: 1px solid #38e;
+            color: #27c;
+            line-height: 32px;
+            padding: 0 10px;
+        }
+
+        button[rm-onhold] .fill {
+            background-color: #38e;
+        }
+    </style>
+</head>
+<body ng-app="demoApp" ng-controller="DemoController">
+    <label>Name: <input ng-model="name"></label>
+    <button rm-onhold="greet(name)" rm-onhold-options="{ duration: 2000 }">Hold to greet</button>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+    <script src="../dist/angular-hold-button.min.js"></script>
+
+    <script>
+        var app = angular.module('demoApp', ['rmHoldButton']);
+
+        app.controller('DemoController', function($scope) {
+            $scope.name = "Dr Strangelove";
+
+            $scope.greet = function(name) {
+                alert('Hello ' + name);
+            }
+        });
+    </script>
+</body>
+</html>
